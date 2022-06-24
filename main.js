@@ -38,7 +38,11 @@ loader.load('scene.gltf',(gltf)=>{
   scene.add(gltf.scene)
   loading.style.display = "none"
 
+},(e)=>{
+  console.log(  );
+  loading.innerHTML = "Loading... " + ((e.loaded / e.total) * 100).toString() + "% "
 })
+
 
 const pl = new THREE.PointLight("0xffffff",20)
 pl.position.z = 300
