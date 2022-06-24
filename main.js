@@ -39,7 +39,7 @@ loader.load('scene.gltf',(gltf)=>{
   loading.style.display = "none"
 
 },(e)=>{
-  console.log(  );
+  console.log( e );
   loading.innerHTML = "Loading... " + ((e.loaded / e.total) * 100).toString() + "% "
 })
 
