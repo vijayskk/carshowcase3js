@@ -2,7 +2,9 @@ canvas{
   position: fixed;
   top: 0;
   left: 0;
+  cursor: grab;
 }
+
 
 body{
   background-color: rgb(202, 202, 202);
