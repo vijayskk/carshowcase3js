@@ -29,11 +29,15 @@ renderer.setSize(window.innerWidth,window.innerHeight);
 
 camera.position.setZ(220);
 
+const loading = document.querySelector("#loading")
+
 const loader = new GLTFLoader()
 loader.load('scene.gltf',(gltf)=>{
   const car = gltf.scene.children[0]
   car.scale.set(0.1,0.1,0.1)
   scene.add(gltf.scene)
+  loading.style.display = "none"
+
 })
 
 const pl = new THREE.PointLight("0xffffff",20)
