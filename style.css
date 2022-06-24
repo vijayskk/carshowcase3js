@@ -6,6 +6,7 @@ canvas{
 
 body{
   background-color: rgb(202, 202, 202);
+  overflow: hidden;
 }
 .info{
   position: absolute;
@@ -26,5 +27,8 @@ body{
   font-size: 40px;
 }
 .hidden{
+  display: none;
+}
+::-webkit-scrollbar{
   display: none;
 }
