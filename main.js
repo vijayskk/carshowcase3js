@@ -14,16 +14,20 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHei
 
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
+  alpha:true
 });
 
 const controls = new OrbitControls( camera, renderer.domElement );
-
+controls.enableZoom = false
+controls.maxPolarAngle = Math.PI / 2;
+controls.enableDamping = true;   //damping 
+controls.dampingFactor = 0.25;
 
 renderer.setPixelRatio(window.devicePixelRatio)
 
 renderer.setSize(window.innerWidth,window.innerHeight);
 
-camera.position.setZ(200);
+camera.position.setZ(220);
 
 const loader = new GLTFLoader()
 loader.load('scene.gltf',(gltf)=>{
@@ -44,7 +48,7 @@ pl2.position.y = 800
 pl2.position.x = -200
 scene.add(pl2)
 
-const groundgeo = new THREE.BoxGeometry(500,1,500)
+const groundgeo = new THREE.BoxGeometry(5000,1,5000)
 
 const groundmat = new THREE.MeshStandardMaterial({color:"0xffffff"})
 
