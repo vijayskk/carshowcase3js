@@ -16,6 +16,7 @@ body{
   right: 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
+  color: white;
 }
 .loading{
   position: absolute;
