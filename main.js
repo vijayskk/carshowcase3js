@@ -23,6 +23,7 @@ const controls = new OrbitControls( camera, renderer.domElement );
 controls.enableZoom = false
 controls.maxPolarAngle = Math.PI / 2.1;
 controls.enableDamping = true;   
+controls.enablePan = false;
 controls.dampingFactor = 0.25;
 
 renderer.setPixelRatio(window.devicePixelRatio)
