@@ -16,10 +16,7 @@
             "nodes" : [
                 2,
                 3,
-                4,
-                5,
-                6,
-                7
+                4
             ]
         }
     ],
@@ -92,59 +89,17 @@
             ]
         },
         {
-            "name" : "Empty",
-            "rotation" : [
-                0.5000000596046448,
-                0.5000000596046448,
-                -0.5,
-                0.5
+            "mesh" : 4,
+            "name" : "Car.001",
+            "scale" : [
+                1.3941571712493896,
+                1.3941571712493896,
+                1.3941571712493896
             ],
             "translation" : [
                 0,
-                -0.2012951523065567,
-                -0.8241706490516663
-            ]
-        },
-        {
-            "name" : "Empty.001",
-            "rotation" : [
-                0.7071067094802856,
-                0,
-                0,
-                0.7071068286895752
-            ],
-            "translation" : [
-                -1.7850700616836548,
-                -0.19369910657405853,
-                -0.8241706490516663
-            ]
-        },
-        {
-            "name" : "Empty.002",
-            "rotation" : [
-                0,
-                0.7071068286895752,
-                -0.7071068286895752,
-                5.338509012631221e-08
-            ],
-            "translation" : [
-                1.7812727689743042,
-                0.9684956073760986,
-                -0.8241706490516663
-            ]
-        },
-        {
-            "name" : "Empty.003",
-            "rotation" : [
-                0,
-                0.7071068286895752,
-                0,
-                0.7071068286895752
-            ],
-            "translation" : [
-                -0.49222370982170105,
-                -0.2012951523065567,
-                -0.8241706490516663
+                -0.005476119928061962,
+                0
             ]
         }
     ],
@@ -180,9 +135,9 @@
             "name" : "Body",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
-                    0.31080982089042664,
-                    0.06739991903305054,
-                    0.00592478271573782,
+                    0.30946895480155945,
+                    0.06662587076425552,
+                    0.006048858631402254,
                     1
                 ],
                 "metallicFactor" : 0
@@ -288,6 +243,22 @@
                         }
                     },
                     "index" : 0
+                },
+                "metallicFactor" : 0
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "Body.001",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.30946895480155945,
+                    0.06662587076425552,
+                    0.006048858631402254,
+                    1
+                ],
+                "baseColorTexture" : {
+                    "index" : 1
                 },
                 "metallicFactor" : 0
             }
@@ -421,12 +392,30 @@
                     "material" : 9
                 }
             ]
+        },
+        {
+            "name" : "Circle.003",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 46,
+                        "NORMAL" : 47,
+                        "TEXCOORD_0" : 48
+                    },
+                    "indices" : 49,
+                    "material" : 10
+                }
+            ]
         }
     ],
     "textures" : [
         {
             "sampler" : 0,
             "source" : 0
+        },
+        {
+            "sampler" : 1,
+            "source" : 1
         }
     ],
     "images" : [
@@ -434,6 +423,11 @@
             "mimeType" : "image/jpeg",
             "name" : "GroundMoss001_COL_1K",
             "uri" : "GroundMoss001_COL_1K.jpg"
+        },
+        {
+            "mimeType" : "image/jpeg",
+            "name" : "bj172-6-500x500",
+            "uri" : "bj172-6-500x500.jpg"
         }
     ],
     "accessors" : [
@@ -832,6 +826,40 @@
             "componentType" : 5123,
             "count" : 6,
             "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 46,
+            "componentType" : 5126,
+            "count" : 129,
+            "max" : [
+                0.64947909116745,
+                0.7171732187271118,
+                0.8995433449745178
+            ],
+            "min" : [
+                0.538715660572052,
+                0.2121315449476242,
+                -0.9978601932525635
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 47,
+            "componentType" : 5126,
+            "count" : 129,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 48,
+            "componentType" : 5126,
+            "count" : 129,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 49,
+            "componentType" : 5123,
+            "count" : 195,
+            "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
@@ -1064,17 +1092,43 @@
             "buffer" : 0,
             "byteLength" : 12,
             "byteOffset" : 262148
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1548,
+            "byteOffset" : 262160
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1548,
+            "byteOffset" : 263708
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1032,
+            "byteOffset" : 265256
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 390,
+            "byteOffset" : 266288
         }
     ],
     "samplers" : [
         {
             "magFilter" : 9729,
             "minFilter" : 9987
+        },
+        {
+            "magFilter" : 9729,
+            "minFilter" : 9987,
+            "wrapS" : 33071,
+            "wrapT" : 33071
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 262160,
+            "byteLength" : 266680,
             "uri" : "mustang.bin"
         }
     ]
